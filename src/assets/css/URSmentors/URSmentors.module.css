@@ -1,0 +1,89 @@
+
+@font-face {
+    font-family: poppinsLight;
+    src: url('../../font//Poppins-Light.ttf');
+}
+
+.URSmentorsPage {
+    padding: 20px;
+}
+
+.URSmentorsPage .URStableComponent .URStable table th {
+  white-space: nowrap;
+}
+.URSmentorsPage .URStableComponent .URStable table tr,
+.URSmentorsPage .URStableComponent .URStable table tr td,
+.URSmentorsPage .URStableComponent .URStable table th {
+    padding: 15px;
+}
+.URSmentorsPage .URStableComponent .URStable table thead {
+  background-color: #606270;
+    color: #fff;
+}
+.URSmentorsPage .URStableComponent .URStable table tbody {
+  font-family: poppinsLight;
+}
+
+.URSmentorsPage .URStableComponent .tableEvents {
+    margin-bottom: 20px;
+}
+
+.URSmentorsPage .URStableComponent .tableEvents input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #f3f3f3;
+    transition: All 0.4s;
+}
+.URSmentorsPage .URStableComponent .tableEvents input:focus {
+    border: 1px solid #fcba00;
+}
+::placeholder {
+    color: #000;
+    opacity: 1;
+    font-family: poppinsLight;
+  }
+  :-ms-input-placeholder {
+    color: #000;
+    opacity: 1;
+    font-family: poppinsLight;
+  }
+  ::-ms-input-placeholder {
+    color: #000;
+    opacity: 1;
+    font-family: poppinsLight;
+  }
+
+  .URSmentorsPage .URStableComponent .tableEvents .events {
+    margin-bottom: 20px;
+  }
+  .URSmentorsPage .URStableComponent .tableEvents .events .eventButton {
+    border: none;
+    border-radius: 2px;
+    padding: 12px;
+    display: inline-block;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-right: 10px;
+    color: #fff;
+  }
+  .URSmentorsPage .URStableComponent .tableEvents .events .updateButton {
+    background-color: orange;
+  }
+  .URSmentorsPage .URStableComponent .tableEvents .events .deleteButton {
+    background-color: red;
+  }
+  .URSmentorsPage .URStableComponent .tableEvents .events .addButton {
+    background-color: green;
+  }
+
+  .activeTR {
+    background-color: #f3f3f3;
+  }
+
+  .URSmentorsPage .URStableComponent .editPage .backToPageButton {
+    padding: 15px;
+    background-color: #fcba00;
+    border: none;
+    color: #fff;
+    font-family: poppinsLight;
+}

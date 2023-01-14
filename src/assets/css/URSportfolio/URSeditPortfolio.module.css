@@ -1,0 +1,91 @@
+
+@font-face {
+    font-family: poppinsLight;
+    src: url('../../font//Poppins-Light.ttf');
+}
+
+.URSeditPortfolio {
+    padding: 20px 0;    
+}
+
+.URSeditPortfolio .URSeditPortfolioForm .nameAndBrand{
+    margin-bottom: 20px;
+}
+.URSeditPortfolio .URSeditPortfolioForm .nameAndBrand .serviceName {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.URSeditPortfolio .URSeditPortfolioForm .nameAndBrand div {
+    width: 100%;
+}
+
+.URSeditPortfolio .URSeditPortfolioForm .nameAndBrand input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #f3f3f3;
+    transition: All 0.4s;
+}
+.URSeditPortfolio .URSeditPortfolioForm .nameAndBrand input:focus {
+    border: 1px solid #fcba00;
+}
+.URSeditPortfolio .URSeditPortfolioForm .description {
+    margin-bottom: 20px;
+}
+.URSeditPortfolio .URSeditPortfolioForm .nameAndBrand label,
+.URSeditPortfolio .URSeditPortfolioForm .description label {
+    font-family: poppinsLight;
+    margin-bottom: 10px;
+}
+
+.URSeditPortfolio .URSeditPortfolioForm .photoAndIcon .photoInput::file-selector-button,
+.URSeditPortfolio .URSeditPortfolioForm .photoAndIcon .hoverIconInput::file-selector-button,
+.URSeditPortfolio .URSeditPortfolioForm .photoAndIcon .iconInput::file-selector-button {
+    display: none;
+}
+.URSeditPortfolio .URSeditPortfolioForm .photoAndIcon .photoAndIconLabel {
+    padding: 7px;
+    background-color: #fcba00;
+    border: none;
+    color: #fff;
+    font-family: poppinsLight;
+    margin: 10px 0;
+    width: fit-content;
+}
+.URSeditPortfolio .URSeditPortfolioForm .photoAndIcon .addedPhoto {
+    width: 100%;
+    height: 300px;
+}
+.URSeditPortfolio .URSeditPortfolioForm .photoAndIcon .photo,
+.URSeditPortfolio .URSeditPortfolioForm .photoAndIcon .icon,
+.URSeditPortfolio .URSeditPortfolioForm .photoAndIcon .hoveredIcon {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.URSeditPortfolio .URSeditPortfolioForm .cancelButtonAndAddButton {
+    margin-top: 10px;
+}
+.URSeditPortfolio .URSeditPortfolioForm .cancelButtonAndAddButton .cancelButton,
+.URSeditPortfolio .URSeditPortfolioForm .cancelButtonAndAddButton .addButton {
+    font-family: poppinsLight;
+    border: none;
+    margin: 10px 20px 10px 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: All 0.4s;
+}
+.URSeditPortfolio .URSeditPortfolioForm .cancelButtonAndAddButton .cancelButton {
+    border: 1px solid red;
+    background-color: red;
+}
+.URSeditPortfolio .URSeditPortfolioForm .cancelButtonAndAddButton .addButton {
+    background-color: green;
+    border: 1px solid green;
+}
+.URSeditPortfolio .URSeditPortfolioForm .cancelButtonAndAddButton .cancelButton:hover,
+.URSeditPortfolio .URSeditPortfolioForm .cancelButtonAndAddButton .addButton:hover {
+    background-color: #fff;
+    color: #000;
+}
+

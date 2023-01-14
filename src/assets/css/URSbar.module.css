@@ -1,0 +1,35 @@
+.URSbar .bar {
+    background-color: #f3f3f3;
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    padding: 20px 0px;
+}
+
+
+.URSbar .bar .logo {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.URSbar .bar .logo #logo {
+    width: 120px;
+}
+
+.URSbar .bar .barList .listItem {
+    text-align: center;
+}
+.URSbar .bar .barList .listItem .link {
+    padding: 20px ;
+    color: #000;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #ddd7d7;
+}
+
+.URSbar .bar .barList .listItem .active {
+    padding: 20px ;
+    color: #fcba00;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid #ddd7d7;
+}

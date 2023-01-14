@@ -1,0 +1,36 @@
+{
+    "pages": [
+        {
+            "link": "Hakkımızda",
+            "path": "/"
+        },
+        {
+            "link": "Hizmet & Eğitim alanları",
+            "path": "/URSserviceAndEducationPage"
+        },
+        {
+            "link": "Hizmet verdiğimiz ülkeler",
+            "path": "/URSserviceAndEducationCountriesPage"
+        },
+        {
+            "link": "Youtube videolarımız",
+            "path": "URSyoutubeVideosPage"
+        },
+        {
+            "link": "Portfolio",
+            "path": "/URSportfolioPage"
+        },
+        {
+            "link": "Mentorlar",
+            "path": "/URSmentorsPage"
+        },
+        {
+            "link": "Sıkca Sorulan Sorular",
+            "path": "/URSfrequentlyAskedQuestionsPage"
+        },
+        {
+            "link": "İletişim araçları",
+            "path": "/URSconcactPage"
+        }
+    ]
+}

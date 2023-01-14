@@ -1,0 +1,67 @@
+.UserEditProfilePage {
+    padding: 20px;
+}
+
+.UserEditProfilePage .UserEditProfilePageForm input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #f3f3f3;
+    transition: All 0.4s;
+    margin-bottom: 20px;
+}
+.UserEditProfilePage .UserEditProfilePageForm input:focus {
+    border: 1px solid #fcba00;
+}
+
+.UserEditProfilePage .UserEditProfilePageForm label {
+    font-family: poppinsLight;
+    margin-bottom: 10px;
+}
+
+.UserEditProfilePage .UserEditProfilePageForm .userPhoto .photoInput::file-selector-button {
+    display: none;
+}
+.UserEditProfilePage .UserEditProfilePageForm .userPhoto .photoLabel {
+    padding: 7px;
+    background-color: #fcba00;
+    border: none;
+    color: #fff;
+    font-family: poppinsLight;
+    margin: 10px 0;
+    width: fit-content;
+}
+.UserEditProfilePage .UserEditProfilePageForm .userPhoto .addedPhoto {
+    width: 100%;
+    height: 300px;
+}
+.UserEditProfilePage .UserEditProfilePageForm .userPhoto .photo {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.UserEditProfilePage .UserEditProfilePageForm .cancelButtonAndAddButton {
+    margin-top: 10px;
+}
+.UserEditProfilePage .UserEditProfilePageForm .cancelButtonAndAddButton .cancelButton,
+.UserEditProfilePage .UserEditProfilePageForm .cancelButtonAndAddButton .addButton {
+    font-family: poppinsLight;
+    border: none;
+    margin: 10px 20px 10px 0;
+    padding: 15px 30px;
+    color: #fff;
+    transition: All 0.4s;
+}
+.UserEditProfilePage .UserEditProfilePageForm .cancelButtonAndAddButton .cancelButton {
+    border: 1px solid red;
+    background-color: red;
+}
+.UserEditProfilePage .UserEditProfilePageForm .cancelButtonAndAddButton .addButton {
+    background-color: green;
+    border: 1px solid green;
+}
+.UserEditProfilePage .UserEditProfilePageForm .cancelButtonAndAddButton .cancelButton:hover,
+.UserEditProfilePage .UserEditProfilePageForm .cancelButtonAndAddButton .addButton:hover {
+    background-color: #fff;
+    color: #000;
+}

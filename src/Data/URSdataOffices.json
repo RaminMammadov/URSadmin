@@ -1,0 +1,21 @@
+{
+    "data": [
+        {
+            "id":1,
+            "name":"Tukiye ofisi",
+            "location":"Mimar Sinan Mah Çolpan Sok Uzunlar İş Merkezi B Blok No:4 Da:6 Çekmeköy / İstanbul",
+            "number":"0532 731-9541",
+            "email":"info@ursdanismanlik.com",
+            "mapUrl":""
+
+        },
+        {
+            "id":2,
+            "name":"Azerbaycan ofisi",
+            "location":"Sübhi Salayev sokağı, bina 37A, Nizami metrosu yakınlığı / Bakü",
+            "number":"050 445-1441",
+            "email":"info@foundin.az",
+            "mapUrl":""
+        }
+    ]
+}

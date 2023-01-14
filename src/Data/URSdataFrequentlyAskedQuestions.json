@@ -1,0 +1,30 @@
+{
+    "data" : [
+        {
+            "id":1,
+            "question":"Amazon Türkiye’ye gönderim yapıyor mu?",
+            "answer":"Amazon.de adresinde, Amazon tarafından satılan ürünlerin %90’ı Türkiye’ye gönderiliyor. Amazon dışında satıcıların da bir çoğu gönderiyor ama sipariş esnasında buna bakmak gerekiyor. Bazen ürün detay sayfasında kırmızı bir yazı ile “Bu ürün Türkiye’ye gönderilmemektedir” yazabilir. Buna rağmen ürünü sepetinize ekleyip adres seçim ekranına ilerleyin. Türkiye adresinizi seçtiğinizde herhangi bir hata mesajı almazsanız ürün sorunsuzca tarafınıza teslim edilecektir."},
+        {
+            "id":2,
+            "question":"Amazon’da ödeme şekli nasıldır?",
+            "answer":"Bizler için kullanılabilecek tek ödeme yöntemi Kredi Kartı (banka kartları) ile ödemektir."},
+        {
+            "id":3,
+            "question":"Türkiye kredi kartları Amazon’da geçer mi?",
+            "answer":"Evet, geçer."},
+        {
+            "id":4,
+            "question":"Ödeme sistemi nasıl çalışmaktadır?",
+            "answer":"Amazon’da sipariş verdiğiniz anda kredi kartınızdan çekim GERÇEKLEŞTİRİLMEZ! Sipariş yola çıkmaya hazır olduğunda (Stokta varsa veya ön sipariş verildiyse ürün çıktığında) kredi kartınızdan tahsil edilir."},
+        {
+            "id":5,
+            "question":"Ön Sipariş verdiğimde para anında kredi kartımdan çekilir mi?",
+            "answer":"Hayır. Ürün satışa hazır olduğunda çekilir."
+        },
+        {
+            "id":6,
+            "question":"Bir ürün ön sipariş verdiğim zamandaki fiyatından daha ucuz veya pahalı olarak piyasaya çıkarsa ne olur?",
+            "answer":"Ürünün daha pahalı olması durumunda Amazon sizden fark almaz. Ama ürün daha ucuz olursa aradaki farkı muhakkak öder. Bu 0.01€ olsa bile."
+        }
+    ]
+}

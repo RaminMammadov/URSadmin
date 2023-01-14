@@ -1,0 +1,9 @@
+{
+    "data":[
+        {"id":1,"name":"Azerbaijan"},
+        {"id":2,"name":"Turkiye"},
+        {"id":3,"name":"Amerika"},
+        {"id":5,"name":"Iran"},
+        {"id":6,"name":"Ingiltere"}
+    ]
+}

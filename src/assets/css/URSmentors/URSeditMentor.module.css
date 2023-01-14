@@ -1,0 +1,91 @@
+
+@font-face {
+    font-family: poppinsLight;
+    src: url('../../font//Poppins-Light.ttf');
+}
+
+.URSeditMentor {
+    padding: 20px 0;    
+}
+
+.URSeditMentor .URSeditMentorForm .nameAndBrand{
+    margin-bottom: 20px;
+}
+.URSeditMentor .URSeditMentorForm .nameAndDepartment .mentorName {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.URSeditMentor .URSeditMentorForm .nameAndDepartment div {
+    width: 100%;
+}
+
+.URSeditMentor .URSeditMentorForm .nameAndDepartment input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #f3f3f3;
+    transition: All 0.4s;
+}
+.URSeditMentor .URSeditMentorForm .nameAndDepartment input:focus {
+    border: 1px solid #fcba00;
+}
+.URSeditMentor .URSeditMentorForm .description {
+    margin-bottom: 20px;
+}
+.URSeditMentor .URSeditMentorForm .nameAndDepartment label {
+    font-family: poppinsLight;
+    margin-bottom: 10px;
+}
+
+.URSeditMentor .URSeditMentorForm .photoAndIcon .photoInput::file-selector-button,
+.URSeditMentor .URSeditMentorForm .photoAndIcon .hoverIconInput::file-selector-button,
+.URSeditMentor .URSeditMentorForm .photoAndIcon .iconInput::file-selector-button {
+    display: none;
+}
+.URSeditMentor .URSeditMentorForm .photoAndIcon .photoAndIconLabel {
+    padding: 7px;
+    background-color: #fcba00;
+    border: none;
+    color: #fff;
+    font-family: poppinsLight;
+    margin: 10px 0;
+    width: fit-content;
+}
+.URSeditMentor .URSeditMentorForm .photoAndIcon .addedPhoto {
+    width: 100%;
+    height: 300px;
+}
+.URSeditMentor .URSeditMentorForm .photoAndIcon .photo,
+.URSeditMentor .URSeditMentorForm .photoAndIcon .icon,
+.URSeditMentor .URSeditMentorForm .photoAndIcon .hoveredIcon {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 20px;
+}
+
+.URSeditMentor .URSeditMentorForm .cancelButtonAndAddButton {
+    margin-top: 10px;
+}
+.URSeditMentor .URSeditMentorForm .cancelButtonAndAddButton .cancelButton,
+.URSeditMentor .URSeditMentorForm .cancelButtonAndAddButton .addButton {
+    font-family: poppinsLight;
+    border: none;
+    margin: 10px 20px 10px 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: All 0.4s;
+}
+.URSeditMentor .URSeditMentorForm .cancelButtonAndAddButton .cancelButton {
+    border: 1px solid red;
+    background-color: red;
+}
+.URSeditMentor .URSeditMentorForm .cancelButtonAndAddButton .addButton {
+    background-color: green;
+    border: 1px solid green;
+}
+.URSeditMentor .URSeditMentorForm .cancelButtonAndAddButton .cancelButton:hover,
+.URSeditMentor .URSeditMentorForm .cancelButtonAndAddButton .addButton:hover {
+    background-color: #fff;
+    color: #000;
+}
+

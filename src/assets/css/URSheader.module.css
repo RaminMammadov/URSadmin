@@ -1,0 +1,124 @@
+:root {
+    --mainColor: #606270
+}
+
+@font-face {
+    font-family: poppinsLight;
+    src: url('../font/Poppins-Light.ttf');
+}
+
+
+.URSheader {
+    position: relative;
+    margin-left: 250px;
+}
+
+.URSheader .user {
+    background-color: var(--mainColor);
+    padding: 10px 0;
+
+}
+
+.URSheader .user .userNameAndPhoto {
+    cursor: pointer;
+}
+
+.URSheader .user .userNameAndPhoto {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    width: fit-content;
+    float: right;
+}
+
+.URSheader .user .userNameAndPhoto .userPhoto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 12px;
+}
+
+.URSheader .user .userNameAndPhoto .userPhoto .photo,
+.URSheader .userProphile .userNameAndPhoto .userPhoto .photo {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.URSheader .user .userNameAndPhoto .userName {
+    margin-right: 20px;
+    font-family: poppinsLight;
+}
+
+.URSheader .userProphile {
+    color: #fff;
+    width: 300px;
+    background-color: var(--mainColor);
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 4px;
+    z-index: 9999;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.URSheader .userProphile::after {
+    content: '';
+    position: absolute;
+    display: block;
+    border: solid var(--mainColor);
+    border-width: 0 10px 10px 0;
+    padding: 6px;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    top: -2%;
+    right: 10%;
+}
+
+.URSheader .userProphile .userNameAndPhoto .userPhoto {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.URSheader .userProphile .userNameAndPhoto .userName {
+    text-align: center;
+    margin-top: 5px;
+    font-family: poppinsLight;
+    margin-bottom: 30px;
+
+}
+
+.URSheader .userProphile .signOutButton {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.URSheader .userProphile .signOutButton .button {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    border: 1px solid #fff;
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.URSheader .userProphile .prophileList {
+    border-bottom: 1px solid #bbaeae;
+    padding-bottom: 20px;
+}
+
+.URSheader .userProphile .prophileList .listItem {
+    padding: 10px 0;
+    color: #fff;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    display: block;
+    font-family: poppinsLight;
+    font-weight: 500;
+}

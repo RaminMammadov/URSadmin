@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5507f7d2.css",
+    "main.js": "/static/js/main.baa6ee70.js",
+    "static/media/mainbanner.png": "/static/media/mainbanner.c440aeb0d866ccefd6c4.png",
+    "static/media/mobilemainbanner.png": "/static/media/mobilemainbanner.33960fa7969928a4d25a.png",
+    "static/media/brandLogo.jpeg": "/static/media/brandLogo.8de42f734fe5be6e9f60.jpeg",
+    "static/media/about.jpg": "/static/media/about.e6aa179717e43a5895fc.jpg",
+    "static/media/11.svg": "/static/media/11.c5774a1c3613cd170ed3a9f6b960d081.svg",
+    "static/media/12.svg": "/static/media/12.62c9eddc4414b734a8cacfe44c34ea69.svg",
+    "static/media/Poppins-Light.ttf": "/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
+    "static/media/Poppins-Medium.ttf": "/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "static/media/online-arbitrage.png": "/static/media/online-arbitrage.1e810b571d0adb25b0a4.png",
+    "static/media/technical-service.png": "/static/media/technical-service.97f9d138dd511c1c537f.png",
+    "static/media/image4.jpeg": "/static/media/image4.7edd778dd210d82907d0.jpeg",
+    "static/media/image1.jpeg": "/static/media/image1.6b2aa1f0831750f712fe.jpeg",
+    "static/media/private-label.png": "/static/media/private-label.2c05f7f79b6a80dcfc79.png",
+    "static/media/image3.jpeg": "/static/media/image3.0c4beb47281680654016.jpeg",
+    "static/media/image2.jpeg": "/static/media/image2.5bd3ecbc23f7235238b3.jpeg",
+    "static/media/image-frame.svg": "/static/media/image-frame.eac5eb29ebe033eec2c6.svg",
+    "index.html": "/index.html",
+    "main.5507f7d2.css.map": "/static/css/main.5507f7d2.css.map",
+    "main.baa6ee70.js.map": "/static/js/main.baa6ee70.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5507f7d2.css",
+    "static/js/main.baa6ee70.js"
+  ]
+}

@@ -1,0 +1,21 @@
+@font-face {
+    font-family: poppinsLight;
+    src: url(../../font/Poppins-Light.ttf);
+}
+
+.URScontactPage {
+    padding: 20px;
+}
+
+.URScontactPage .URSContactHeader .headerLinks {
+    display: flex;
+    justify-content: center;
+}
+
+.URScontactPage .URSContactHeader .headerLinks .headerLink {
+    margin: 0 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor: pointer;
+}

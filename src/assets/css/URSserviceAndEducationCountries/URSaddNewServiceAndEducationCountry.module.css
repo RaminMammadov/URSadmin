@@ -1,0 +1,88 @@
+
+@font-face {
+    font-family: poppinsLight;
+    src: url('../../font//Poppins-Light.ttf');
+}
+.URSaddNewServiceAndEducationCountry {
+    padding: 20px; 
+}
+
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .nameAndPhoto {
+    margin-bottom: 20px;
+}
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .nameAndPhoto .serviceAndEducationName {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .nameAndPhoto  div {
+    width: 100%;
+}
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .nameAndPhoto  input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #f3f3f3;
+    transition: All 0.4s;
+}
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .nameAndPhoto input:focus {
+    border: 1px solid #fcba00;
+}
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .description {
+    margin-bottom: 20px;
+}
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .nameAndPhoto label,
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .description label {
+    font-family: poppinsLight;
+    margin-bottom: 10px;
+}
+
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .countryFlagPhoto .photoInput::file-selector-button,
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .countryFlagPhoto .hoverIconInput::file-selector-button,
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .countryFlagPhoto .iconInput::file-selector-button {
+    display: none;
+}
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .countryFlagPhoto .photoAndIconLabel {
+    padding: 7px;
+    background-color: #fcba00;
+    border: none;
+    color: #fff;
+    font-family: poppinsLight;
+    margin: 10px 0;
+    width: fit-content;
+}
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .countryFlagPhoto .addedPhoto {
+    width: 100%;
+    height: 300px;
+}
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .countryFlagPhoto .photo {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .cancelButtonAndAddButton {
+    margin-top: 10px;
+}
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .cancelButtonAndAddButton .cancelButton,
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .cancelButtonAndAddButton .addButton {
+    font-family: poppinsLight;
+    border: none;
+    margin: 10px 20px 10px 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: All 0.4s;
+}
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .cancelButtonAndAddButton .cancelButton {
+    border: 1px solid red;
+    background-color: red;
+}
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .cancelButtonAndAddButton .addButton {
+    background-color: green;
+    border: 1px solid green;
+}
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .cancelButtonAndAddButton .cancelButton:hover,
+.URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .cancelButtonAndAddButton .addButton:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+

@@ -1,0 +1,47 @@
+.URSsettingsPage {
+    padding: 20px;
+}
+
+.URSsettingsPage .URSsettingsPageForm input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #f3f3f3;
+    transition: All 0.4s;
+    margin-bottom: 20px;
+}
+.URSsettingsPage .URSsettingsPageForm input:focus {
+    border: 1px solid #fcba00;
+}
+
+.URSsettingsPage .URSsettingsPageForm label {
+    font-family: poppinsLight;
+    margin-bottom: 10px;
+}
+
+
+.URSsettingsPage .URSsettingsPageForm .cancelButtonAndAddButton {
+    margin-top: 10px;
+}
+.URSsettingsPage .URSsettingsPageForm .cancelButtonAndAddButton .cancelButton,
+.URSsettingsPage .URSsettingsPageForm .cancelButtonAndAddButton .addButton {
+    font-family: poppinsLight;
+    border: none;
+    margin: 10px 20px 10px 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: All 0.4s;
+}
+.URSsettingsPage .URSsettingsPageForm .cancelButtonAndAddButton .cancelButton {
+    border: 1px solid red;
+    background-color: red;
+}
+.URSsettingsPage .URSsettingsPageForm .cancelButtonAndAddButton .addButton {
+    background-color: green;
+    border: 1px solid green;
+}
+.URSsettingsPage .URSsettingsPageForm .cancelButtonAndAddButton .cancelButton:hover,
+.URSsettingsPage .URSsettingsPageForm .cancelButtonAndAddButton .addButton:hover {
+    background-color: #fff;
+    color: #000;
+}

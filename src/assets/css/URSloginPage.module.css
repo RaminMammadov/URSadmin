@@ -1,0 +1,62 @@
+@font-face {
+    font-family: poppinsLight;
+    src: url('../font//Poppins-Light.ttf');
+}
+
+.URSloginPage {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.URSloginPage .loginPage .logo #logo {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.URSloginPage .loginPage .loginForm .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.URSloginPage .loginPage .loginForm .form .inputUsername,
+.URSloginPage .loginPage .loginForm .form .inputPassword,
+.URSloginPage .loginPage .loginForm .form .submitButton {
+    width: 40%;
+    margin: 15px auto;
+    padding: 15px 10px;
+    outline: none;
+    border: 1px solid #f3f3f3;
+    transition: All 0.4s;
+}
+.URSloginPage .loginPage .loginForm .form .inputUsername:focus,
+.URSloginPage .loginPage .loginForm .form .inputPassword:focus {
+    border: 1px solid #fcba00;
+}
+.URSloginPage .loginPage .loginForm .form .submitButton {
+    background-color: #fcba00;
+    color: #fff;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+.URSloginPage .loginPage .loginForm .form .submitButton:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+
+::placeholder {
+    color: #000;
+    opacity: 1;
+    font-family: poppinsLight;
+  }
+  :-ms-input-placeholder {
+    color: #000;
+    opacity: 1;
+    font-family: poppinsLight;
+  }
+  ::-ms-input-placeholder {
+    color: #000;
+    opacity: 1;
+    font-family: poppinsLight;
+  }

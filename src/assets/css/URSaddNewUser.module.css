@@ -1,0 +1,53 @@
+.URSaddNewUser {
+    padding: 20px;
+}
+
+.URSaddNewUser .URSaddNewUserForm {
+    margin-bottom: 20px;
+}
+
+.URSaddNewUser .URSaddNewUserForm input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #f3f3f3;
+    transition: All 0.4s;
+    margin-bottom: 20px;
+}
+.URSaddNewUser .URSaddNewUserForm input:focus {
+    border: 1px solid #fcba00;
+}
+
+.URSaddNewUser .URSaddNewUserForm label {
+    font-family: poppinsLight;
+    margin-bottom: 10px;
+}
+
+
+.URSaddNewUser .URSaddNewUserForm .cancelButtonAndAddButton {
+    margin-top: 10px;
+}
+.URSaddNewUser .URSaddNewUserForm .cancelButtonAndAddButton .cancelButton,
+.URSaddNewUser .URSaddNewUserForm .cancelButtonAndAddButton .addButton {
+    font-family: poppinsLight;
+    border: none;
+    margin: 10px 20px 10px 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: All 0.4s;
+}
+.URSaddNewUser .URSaddNewUserForm .cancelButtonAndAddButton .cancelButton {
+    border: 1px solid red;
+    background-color: red;
+}
+.URSaddNewUser .URSaddNewUserForm .cancelButtonAndAddButton .addButton {
+    background-color: green;
+    border: 1px solid green;
+}
+.URSaddNewUser .URSaddNewUserForm .cancelButtonAndAddButton .cancelButton:hover,
+.URSaddNewUser .URSaddNewUserForm .cancelButtonAndAddButton .addButton:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+

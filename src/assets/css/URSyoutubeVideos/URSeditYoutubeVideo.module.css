@@ -1,0 +1,91 @@
+
+@font-face {
+    font-family: poppinsLight;
+    src: url('../../font//Poppins-Light.ttf');
+}
+
+.URSeditYoutubeVideo {
+    padding: 20px 0; 
+}
+
+.URSeditYoutubeVideo .editYoutubeVideoForm .nameAndUrl {
+    margin-bottom: 20px;
+}
+.URSeditYoutubeVideo .editYoutubeVideoForm .nameAndUrl .videoName {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.URSeditYoutubeVideo .editYoutubeVideoForm .nameAndUrl  div {
+    width: 100%;
+}
+
+.URSeditYoutubeVideo .editYoutubeVideoForm .nameAndUrl  input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #f3f3f3;
+    transition: All 0.4s;
+}
+.URSeditYoutubeVideo .editYoutubeVideoForm .nameAndUrl input:focus {
+    border: 1px solid #fcba00;
+}
+.URSeditYoutubeVideo .editYoutubeVideoForm .description {
+    margin-bottom: 20px;
+}
+.URSeditYoutubeVideo .editYoutubeVideoForm .nameAndUrl label,
+.URSeditYoutubeVideo .editYoutubeVideoForm .description label {
+    font-family: poppinsLight;
+    margin-bottom: 10px;
+}
+
+.URSeditYoutubeVideo .editYoutubeVideoForm .countryFlagPhoto .photoInput::file-selector-button,
+.URSeditYoutubeVideo .editYoutubeVideoForm .countryFlagPhoto .hoverIconInput::file-selector-button,
+.URSeditYoutubeVideo .editYoutubeVideoForm .countryFlagPhoto .iconInput::file-selector-button {
+    display: none;
+}
+.URSeditYoutubeVideo .editYoutubeVideoForm .countryFlagPhoto .photoAndIconLabel {
+    padding: 7px;
+    background-color: #fcba00;
+    border: none;
+    color: #fff;
+    font-family: poppinsLight;
+    margin: 10px 0;
+    width: fit-content;
+}
+.URSeditYoutubeVideo .editYoutubeVideoForm .countryFlagPhoto .addedPhoto {
+    width: 100%;
+    height: 300px;
+}
+.URSeditYoutubeVideo .editYoutubeVideoForm .countryFlagPhoto .photo,
+.URSeditYoutubeVideo .editYoutubeVideoForm .countryFlagPhoto .icon,
+.URSeditYoutubeVideo .editYoutubeVideoForm .countryFlagPhoto .hoveredIcon {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.URSeditYoutubeVideo .editYoutubeVideoForm .cancelButtonAndAddButton {
+    margin-top: 10px;
+}
+.URSeditYoutubeVideo .editYoutubeVideoForm .cancelButtonAndAddButton .cancelButton,
+.URSeditYoutubeVideo .editYoutubeVideoForm .cancelButtonAndAddButton .addButton {
+    font-family: poppinsLight;
+    border: none;
+    margin: 10px 20px 10px 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: All 0.4s;
+}
+.URSeditYoutubeVideo .editYoutubeVideoForm .cancelButtonAndAddButton .cancelButton {
+    border: 1px solid red;
+    background-color: red;
+}
+.URSeditYoutubeVideo .editYoutubeVideoForm .cancelButtonAndAddButton .addButton {
+    background-color: green;
+    border: 1px solid green;
+}
+.URSeditYoutubeVideo .editYoutubeVideoForm .cancelButtonAndAddButton .cancelButton:hover,
+.URSeditYoutubeVideo .editYoutubeVideoForm .cancelButtonAndAddButton .addButton:hover {
+    background-color: #fff;
+    color: #000;
+}
+
