@@ -1,12 +1,16 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback ,useEffect } from "react";
 import style from "../assets/css/URSserviceAndEducation/URSserviceAndEducationPage.module.css";
 import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import URSdataCountries from "../Data/URSdataCountries.json";
 import URSeditServiceAndEducationCountry from "../Components/URSserviceAndEducationCountries/URSeditServiceAndEducationCountry";
+import axios from "axios";
 
 
 export default function URSserviceAndEducationCountriesPage() {
+  const axiosInstance = axios.create({
+    withCredentials: true
+})
   const [searchInpVal, setSearchInpVal] = useState("");
   const [selectedCountry, setSelectedCountry] =
     useState(false);
@@ -40,6 +44,15 @@ export default function URSserviceAndEducationCountriesPage() {
   const getEditPage = useCallback((e) => {
     selectedData ? setEditPage(!editPage) : null;
   });
+
+  const checkAuth = () => {
+    axiosInstance.post('http://20.16.192.15:8080/api/v1/checkAuth',{})
+    .then(result => console.log(result.data))
+    .catch(error => console.log(error))
+  }
+  useEffect(() => {
+    checkAuth()
+  },[])
   return (
     <div className={style.URSserviceAndEducationPage}>
       <div className={style.URStableComponent}>
