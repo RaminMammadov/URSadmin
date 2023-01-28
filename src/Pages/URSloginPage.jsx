@@ -1,26 +1,38 @@
 import React, { useRef, useEffect, useCallback } from 'react';
 import Logo from '../assets/images/11.svg';
 import style from '../assets/css/URSloginPage.module.css';
-import axios from 'axios';
+// import axios from 'axios';
 
 export default function URSloginPage(props) {
-    const axiosInstance = axios.create({
-        withCredentials: true
-    })
+    // At instance level
+// const instance = axios.create({
+//     withCredentials: true
+//   });
 
     const userName = useRef();
     const password = useRef();
-    const url = 'http://20.16.192.15:8080/';
+    const url = 'https://localhost:443/';
     const logIn = (e) => {
         e.preventDefault();
-        axiosInstance.post(`${url}api/v1/login`, {
+        fetch(`${url}api/v1/login`, {
+           method: 'POST',
+           credentials: 'include',
+           headers: {
+            'Content-Type': 'application/json',
+           },
+           body: JSON.stringify({
             "email": userName.current.value,
             "password": password.current.value
+           })
         }).then(response => {
-            if (response.data.isLogged) {
-                props.setLogged(response.data.isLogged)
-                console.log('Login edildi...')
-            }
+            console.log(response.json().then(data=>{
+                console.log(data)
+                props.setLogged(data.isLogged)
+            }))
+            // if (response.json()) {
+            //     props.setLogged(response.data.isLogged)
+            //     console.log('Login edildi...')
+            // }
         })
             .catch(error => console.log(error));
     }
