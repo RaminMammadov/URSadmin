@@ -39,12 +39,6 @@ export default function URSaboutusPage() {
     axios.get(`${url}/about`)
       .then(response => {
         setURSDataAboutUs(response.data.data)
-        URSDataAboutUs.map(item => {
-          setTitle(item.title);
-          setId(item._id);
-          setDescription(item.description)
-          setImage(`https://185.48.182.52/uploads/${item.picture}`)
-        })
       })
       .catch(error => console.log(error))
       .finally(() => {
@@ -53,6 +47,15 @@ export default function URSaboutusPage() {
   };
   useEffect(() => {
     getData()
+  }, [])
+
+  useEffect(() => {
+    URSDataAboutUs.map(item => {
+      setTitle(item.title);
+      setId(item._id);
+      setDescription(item.description)
+      setImage(`https://185.48.182.52/uploads/${item.picture}`)
+    })
   })
   const changeEditorData = (event, editor) => {
     const data = editor.getData();
@@ -64,21 +67,38 @@ export default function URSaboutusPage() {
   const changeData = (e) => {
     e.preventDefault();
     var formdata = new FormData();
-    formdata.append("id", id);
-    formdata.append("title", newTitle ? newTitle : title);
-    formdata.append("description", newDescription ? newDescription : description);
-    formdata.append("picture", newImageSRC ? newImageSRC : imageSRC);
-    axios.put(`${url}/about/edit`, formdata, {
-      headers: {
-        'content-type': 'multipart/form-data'
-      }
-    }).then(response => {
-      window.scrollTo(0, 0)
-      setShowSuccessAlert(true)
-      setTimeout(() => {
-        setShowSuccessAlert(false)
-      }, 2000);
-    }).catch(error => console.log(error))
+    if (newImage) {
+      formdata.append("id", id);
+      formdata.append("title", newTitle ? newTitle : title);
+      formdata.append("description", newDescription ? newDescription : description);
+      formdata.append("picture", newImageSRC);
+      axios.put(`${url}/about/edit`, formdata, {
+        headers: {
+          'content-type': 'multipart/form-data'
+        }
+      }).then(response => {
+        window.scrollTo(0, 0)
+        setShowSuccessAlert(true)
+        setTimeout(() => {
+          setShowSuccessAlert(false)
+        }, 2000);
+      }).catch(error => console.log(error))
+    } else {
+      formdata.append("id", id);
+      formdata.append("title", newTitle ? newTitle : title);
+      formdata.append("description", newDescription ? newDescription : description);
+      axios.put(`${url}/about/edit`, formdata, {
+        headers: {
+          'content-type': 'multipart/form-data'
+        }
+      }).then(response => {
+        window.scrollTo(0, 0)
+        setShowSuccessAlert(true)
+        setTimeout(() => {
+          setShowSuccessAlert(false)
+        }, 2000);
+      }).catch(error => console.log(error))
+    }
   }
 
 
