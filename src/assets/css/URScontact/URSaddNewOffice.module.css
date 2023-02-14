@@ -11,13 +11,15 @@
 .URSaddNewOffice .URSaddNewOfficeForm div {
     width: 100%;
 }
+.URSaddNewOffice .URSaddNewOfficeForm div:not(:first-child) {
+    margin-top: 20px;
+}
 .URSaddNewOffice .URSaddNewOfficeForm  input {
     width: 100%;
     padding: 10px;
     outline: none;
     border: 1px solid #f3f3f3;
     transition: All 0.4s;
-    margin-bottom: 20px;
 }
 .URSaddNewOffice .URSaddNewOfficeForm  input:focus {
     border: 1px solid #fcba00;
@@ -39,6 +41,7 @@
     padding: 10px 30px;
     color: #fff;
     transition: All 0.4s;
+    display: inline-block;
 }
 .URSaddNewOffice .URSaddNewOfficeForm .cancelButtonAndAddButton .cancelButton {
     border: 1px solid red;

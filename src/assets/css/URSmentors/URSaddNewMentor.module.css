@@ -8,12 +8,8 @@
     padding: 20px; 
 }
 
-.URSaddNewMentor .URSaddNewMentorForm .nameAndDepartment {
-    margin-bottom: 20px;
-}
 .URSaddNewMentor .URSaddNewMentorForm .nameAndDepartment .mentorName {
     margin-right: 20px;
-    margin-bottom: 20px;
 }
 .URSaddNewMentor .URSaddNewMentorForm .nameAndDepartment  div {
     width: 100%;
@@ -28,9 +24,7 @@
 .URSaddNewMentor .URSaddNewMentorForm .nameAndDepartment input:focus {
     border: 1px solid #fcba00;
 }
-.URSaddNewMentor .URSaddNewMentorForm .description {
-    margin-bottom: 20px;
-}
+
 .URSaddNewMentor .URSaddNewMentorForm .nameAndDepartment label,
 .URSaddNewMentor .URSaddNewMentorForm .description label {
     font-family: poppinsLight;
@@ -89,3 +83,6 @@
 }
 
 
+.mt20 {
+    margin-top: 20px;
+}

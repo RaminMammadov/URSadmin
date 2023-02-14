@@ -8,12 +8,9 @@
     padding: 20px; 
 }
 
-.URSaddNewPortfolio .URSaddNewPortfolioForm .nameAndBrand {
-    margin-bottom: 20px;
-}
+
 .URSaddNewPortfolio .URSaddNewPortfolioForm .nameAndBrand .serviceName {
     margin-right: 20px;
-    margin-bottom: 20px;
 }
 .URSaddNewPortfolio .URSaddNewPortfolioForm .nameAndBrand  div {
     width: 100%;
@@ -88,4 +85,6 @@
     color: #000;
 }
 
-
+.mt20 {
+    margin-top: 20px;
+}

@@ -4,16 +4,9 @@
     src: url('../../font//Poppins-Light.ttf');
 }
 
-.URSeditMentor {
-    padding: 20px 0;    
-}
 
-.URSeditMentor .URSeditMentorForm .nameAndBrand{
-    margin-bottom: 20px;
-}
 .URSeditMentor .URSeditMentorForm .nameAndDepartment .mentorName {
     margin-right: 20px;
-    margin-bottom: 20px;
 }
 .URSeditMentor .URSeditMentorForm .nameAndDepartment div {
     width: 100%;
@@ -28,9 +21,6 @@
 }
 .URSeditMentor .URSeditMentorForm .nameAndDepartment input:focus {
     border: 1px solid #fcba00;
-}
-.URSeditMentor .URSeditMentorForm .description {
-    margin-bottom: 20px;
 }
 .URSeditMentor .URSeditMentorForm .nameAndDepartment label {
     font-family: poppinsLight;
@@ -89,3 +79,6 @@
     color: #000;
 }
 
+.mt20 {
+    margin-top: 20px;
+}

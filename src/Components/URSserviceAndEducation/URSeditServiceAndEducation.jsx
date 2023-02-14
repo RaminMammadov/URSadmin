@@ -1,63 +1,130 @@
 import React, { useState, useCallback, useEffect } from "react";
 import style from "../../assets/css/URSserviceAndEducation/URSeditServiceAndEducation.module.css";
-import { EditorState } from "draft-js";
-import { Editor } from "react-draft-wysiwyg";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import axios from "axios";
+import { mdiWindowShutter } from "@mdi/js";
 
 export default function URSeditServiceAndEducation(props) {
-  const [image, setImage] = useState(null);
-  const [icon, setIcon] = useState(null);
-  const [hoverIcon, setHoverIcon] = useState(null);
+  axios.defaults.withCredentials = true;
+  const url = 'https://185.48.182.52/v1';
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+  const [serviceName, setServiceName] = useState(props.data.title);
+  const [shortDescription, setShortDescription] = useState(props.data.shortDescription);
+  const [description, setDescription] = useState(props.data.description);
+
+  const [image, setImage] = useState(`https://185.48.182.52/uploads/${props.data.picture1}`);
+  const [imageSRC, setImageSRC] = useState('');
+
+  const [icon, setIcon] = useState(`https://185.48.182.52/uploads/${props.data.picture2}`);
+  const [iconSRC, setIconSRC] = useState('');
+
+  const [hoverIcon, setHoverIcon] = useState(`https://185.48.182.52/uploads/${props.data.picture3}`);
+  const [hoverIconSRC, setHoverIconSRC] = useState('');
+
+  const [showServiceNameError, setShowServiceNameError] = useState(false);
+  const [showShortDescriptionError, setShowShortDescriptionError] = useState(false);
+  const [showDescriptionError, setShowDescriptionError] = useState(false);
 
   const onImageChange = useCallback((event) => {
     if (event.target.files && event.target.files[0]) {
       setImage(URL.createObjectURL(event.target.files[0]));
+      setImageSRC(event.target.files[0]);
     }
   });
 
   const onIconChange = useCallback((event) => {
     if (event.target.files && event.target.files[0]) {
       setIcon(URL.createObjectURL(event.target.files[0]));
+      setIconSRC(event.target.files[0])
     }
   });
 
   const onHoverIconChange = useCallback((event) => {
     if (event.target.files && event.target.files[0]) {
       setHoverIcon(URL.createObjectURL(event.target.files[0]));
+      setHoverIconSRC(event.target.files[0]);
     }
   });
 
   //editor
-  const [editorState, setEditorState] = useState(() =>
-    EditorState.createEmpty()
-  );
+  const changeEditorData = (event, editor) => {
+    const data = editor.getData();
+    setDescription(data)
+  }
+
+
+  console.log(props.data._id)
+
+
+  //updateServce
+  const updateService = useCallback((e) => {
+    e.preventDefault();
+    var formdata = new FormData();
+
+    serviceName.trim() ? setShowServiceNameError(false) : setShowServiceNameError(true);
+    shortDescription.trim() ? setShowShortDescriptionError(false) : setShowShortDescriptionError(true);
+    description.trim() ? setShowDescriptionError(false) : setShowDescriptionError(true);
+    formdata.append("id", props.data._id)
+    formdata.append("title", serviceName)
+    formdata.append("shortDescription", shortDescription)
+    formdata.append("description", description)
+    formdata.append("picture1", imageSRC)
+    formdata.append("picture2", iconSRC)
+    formdata.append("picture3", hoverIconSRC)
+    axios.put(`${url}/services/edit`, formdata, {
+      headers: {
+        'content-type': 'multipart/form-data'
+      }
+    })
+      .then(response => {
+        window.scrollTo(0, 0)
+        setShowSuccessAlert(true)
+        setTimeout(() => {
+          setShowSuccessAlert(false)
+        }, 2000);
+      })
+      .catch(error => console.log(error))
+  })
 
   return (
     <div className={style.URSeditServiceAndEducation}>
+      {showSuccessAlert && <div className="alert alert-success" role="alert">
+        Hizmet & eğitim alanı değiştirildi!
+      </div>}
       <form action="#" className={style.URSeditServiceAndEducationForm}>
         <div className={style.nameAndShortDescription}>
           <div>
-            <label htmlFor="nameInput">İsim</label>
+            <label htmlFor="nameInput">Servis ismi</label>
             <input
               type="text"
               className={style.serviceAndEducationName}
-              value={props.data.name}
               id="nameInput"
+              defaultValue={serviceName}
+              onChange={e => setServiceName(e.target.value)}
             />
+            {showServiceNameError && <p className="mt-2 text-danger small">Servis ismi boş bırakılamaz</p>}
           </div>
 
-          <div>
+          <div className={style.mt20}>
             <label htmlFor="shortDescription">Kısa açıklama</label>
             <input
               type="text"
-              value={props.data.shortDescription}
               id="shortDescription"
+              defaultValue={shortDescription}
+              onChange={e => setShortDescription(e.target.value)}
             />
+            {showShortDescriptionError && <p className="mt-2 text-danger small">Kısa açıklama kısmı boş bırakılamaz</p>}
           </div>
         </div>
-        <div className={style.description}>
+        <div className={`${style.description} ${style.mt20}`}>
           <label htmlFor="description">Açıklama</label>
-          <Editor editorState={editorState} id="description" />
+          <CKEditor
+            editor={ClassicEditor}
+            data={`${description}`}
+            onChange={changeEditorData}
+          />
+          {showDescriptionError && <p className="mt-2 text-danger small">Açıklama kısmı boş bırakılamaz</p>}
         </div>
 
         <div className={style.photoAndIcon}>
@@ -123,8 +190,8 @@ export default function URSeditServiceAndEducation(props) {
         </div>
 
         <div className={style.cancelButtonAndAddButton}>
-          <button className={style.cancelButton}>İptal et</button>
-          <button className={style.addButton}>Düzenle</button>
+          <button className={style.cancelButton}>Geri dön</button>
+          <button className={style.addButton} onClick={updateService}>Düzenle</button>
         </div>
       </form>
     </div>

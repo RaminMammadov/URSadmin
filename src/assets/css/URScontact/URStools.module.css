@@ -20,7 +20,6 @@
     outline: none;
     border: 1px solid #f3f3f3;
     transition: All 0.4s;
-    margin-bottom: 20px;
 }
 
 .URStools .URStoolsForm input:focus {
@@ -56,4 +55,8 @@
 .URStools .URStoolsForm .cancelButtonAndAddButton .addButton:hover {
     background-color: #fff;
     color: #000;
+}
+
+.mt20 {
+    margin-top: 20px;
 }

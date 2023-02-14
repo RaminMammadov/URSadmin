@@ -7,12 +7,9 @@
     padding: 20px; 
 }
 
-.URSaddNewFrequentlyAskedQuestion .adddNewFrequentlyAskedQuestionForm .questionAndAnswer {
-    margin-bottom: 20px;
-}
+
 .URSaddNewFrequentlyAskedQuestion .adddNewFrequentlyAskedQuestionForm .questionAndAnswer .question {
     margin-right: 20px;
-    margin-bottom: 20px;
 }
 .URSaddNewFrequentlyAskedQuestion .adddNewFrequentlyAskedQuestionForm .questionAndAnswer  div {
     width: 100%;
@@ -26,9 +23,6 @@
 }
 .URSaddNewFrequentlyAskedQuestion .adddNewFrequentlyAskedQuestionForm .questionAndAnswer input:focus {
     border: 1px solid #fcba00;
-}
-.URSaddNewFrequentlyAskedQuestion .adddNewFrequentlyAskedQuestionForm .description {
-    margin-bottom: 20px;
 }
 .URSaddNewFrequentlyAskedQuestion .adddNewFrequentlyAskedQuestionForm .questionAndAnswer label,
 .URSaddNewFrequentlyAskedQuestion .adddNewFrequentlyAskedQuestionForm .description label {
@@ -66,7 +60,8 @@
 .URSaddNewFrequentlyAskedQuestion .adddNewFrequentlyAskedQuestionForm .cancelButtonAndAddButton .addButton {
     font-family: poppinsLight;
     border: none;
-    margin: 10px 20px 10px 0;
+    margin: 20px 20px 10px 0;
+    display: inline-block;
     padding: 10px 30px;
     color: #fff;
     transition: All 0.4s;
@@ -85,4 +80,7 @@
     color: #000;
 }
 
+.mt20 {
+    margin-top: 20px;
+}
 

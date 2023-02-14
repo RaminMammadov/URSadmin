@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: poppinsLight;
     src: url('../../font//Poppins-Light.ttf');
@@ -32,28 +31,28 @@
     margin-bottom: 10px;
 }
 
-.URSsocialMedia .URSsocialMediaForm .cancelButtonAndAddButton {
-    margin-top: 10px;
-}
-.URSsocialMedia .URSsocialMediaForm .cancelButtonAndAddButton .cancelButton,
-.URSsocialMedia .URSsocialMediaForm .cancelButtonAndAddButton .addButton {
+.URSsocialMedia .URSsocialMediaForm .addButton {
     font-family: poppinsLight;
-    border: none;
-    margin: 10px 20px 10px 0;
-    padding: 10px 30px;
+    border: 1px solid #fcba00;
+    padding: 14.5px 30px;
     color: #fff;
     transition: All 0.4s;
+    background-color: #fcba00;
+    margin-top: 6px;
+    margin-left: 5px;
 }
-.URSsocialMedia .URSsocialMediaForm .cancelButtonAndAddButton .cancelButton {
-    border: 1px solid red;
-    background-color: red;
-}
-.URSsocialMedia .URSsocialMediaForm .cancelButtonAndAddButton .addButton {
-    background-color: green;
-    border: 1px solid green;
-}
-.URSsocialMedia .URSsocialMediaForm .cancelButtonAndAddButton .cancelButton:hover,
-.URSsocialMedia .URSsocialMediaForm .cancelButtonAndAddButton .addButton:hover {
+
+.URSsocialMedia .URSsocialMediaForm .addButton:hover {
     background-color: #fff;
     color: #000;
+}
+
+.socialMediaInputAndAddButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socialMediaInputAndAddButton div:last-child {
+    width: fit-content;
 }

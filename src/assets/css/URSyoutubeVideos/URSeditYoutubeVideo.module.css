@@ -4,16 +4,12 @@
     src: url('../../font//Poppins-Light.ttf');
 }
 
-.URSeditYoutubeVideo {
-    padding: 20px 0; 
-}
-
 .URSeditYoutubeVideo .editYoutubeVideoForm .nameAndUrl {
     margin-bottom: 20px;
 }
 .URSeditYoutubeVideo .editYoutubeVideoForm .nameAndUrl .videoName {
     margin-right: 20px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 .URSeditYoutubeVideo .editYoutubeVideoForm .nameAndUrl  div {
     width: 100%;
@@ -32,8 +28,7 @@
 .URSeditYoutubeVideo .editYoutubeVideoForm .description {
     margin-bottom: 20px;
 }
-.URSeditYoutubeVideo .editYoutubeVideoForm .nameAndUrl label,
-.URSeditYoutubeVideo .editYoutubeVideoForm .description label {
+.URSeditYoutubeVideo .editYoutubeVideoForm .nameAndUrl label {
     font-family: poppinsLight;
     margin-bottom: 10px;
 }
@@ -88,4 +83,6 @@
     background-color: #fff;
     color: #000;
 }
-
+.mt20 {
+    margin-top: 20px;
+}

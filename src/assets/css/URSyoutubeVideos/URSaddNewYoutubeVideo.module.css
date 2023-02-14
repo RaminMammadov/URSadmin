@@ -11,7 +11,7 @@
 }
 .URSaddNewYoutubeVideo .addNewYoutubeVideoForm .name .videoName {
   margin-right: 20px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 .URSaddNewYoutubeVideo .addNewYoutubeVideoForm .name div {
   width: 100%;
@@ -112,4 +112,8 @@
   .addButton:hover {
   background-color: #fff;
   color: #000;
+}
+
+.mt20 {
+  margin-top: 20px;
 }

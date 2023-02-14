@@ -1,16 +1,71 @@
 import React, { useState, useCallback } from "react";
 import style from "../assets/css/URSeditProfilePage.module.css";
+import axios from "axios";
 
 export default function URSeditProfilePage() {
-  const [image, setImage] = useState(null);
+  const url = 'https://185.48.182.52/v1';
+
+  const [image, setImage] = useState(`https://185.48.182.52/uploads/${localStorage.getItem('picture')}`);
+  const [imageSRC, setImageSRC] = useState('');
+  const [userName, setUserName] = useState(localStorage.getItem('userName'))
+  const [email, setEmail] = useState(localStorage.getItem('email'))
+  const [userID, setUserID] = useState(localStorage.getItem('id'))
+
+  const [showUserNameError, setShowUserNameError] = useState(false);
+  const [showEmailError, setShowEmailError] = useState(false);
+
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+  showSuccessAlert ? window.scrollTo(0, 0) : null
 
   const onImageChange = useCallback((event) => {
     if (event.target.files && event.target.files[0]) {
       setImage(URL.createObjectURL(event.target.files[0]));
+      setImageSRC(event.target.files[0]);
     }
   });
+
+  const editUser = (e) => {
+    e.preventDefault();
+    userName.trim() ? setShowUserNameError(false) : setShowUserNameError(true);
+    email.trim() ? setShowEmailError(false) : setShowEmailError(true);
+
+    if (userName.trim() && email.trim()) {
+      if (imageSRC) {
+        var formdata = new FormData();
+        formdata.append("id", userID);
+        formdata.append("name", userName);
+        formdata.append("email", email);
+        formdata.append("picture", imageSRC);
+        axios.put(`${url}/user/edit`, formdata)
+          .then(response => {
+            setShowSuccessAlert(true)
+            setTimeout(() => {
+              setShowSuccessAlert(false)
+            }, 2000);
+          })
+          .catch(error => console.log(error))
+      } else {
+        var formdata = new FormData();
+        formdata.append("id", userID);
+        formdata.append("name", userName);
+        formdata.append("email", email);
+        axios.put(`${url}/user/edit`, formdata)
+          .then(response => {
+            setShowSuccessAlert(true)
+            setTimeout(() => {
+              setShowSuccessAlert(false)
+            }, 5000);
+          })
+          .catch(error => console.log(error))
+      }
+    }
+  }
   return (
     <div className={style.UserEditProfilePage}>
+      {showSuccessAlert && <div className="alert alert-success" role="alert">
+        Kuallanıcı yenilendi! <br /><br />
+        Değişiklikleri görmek için çıkış yapıp tekrar giriş yapmalısınız!
+      </div>}
       <form action="#" className={style.UserEditProfilePageForm}>
         <div className={style.userPhoto}>
           <div className="row">
@@ -35,17 +90,24 @@ export default function URSeditProfilePage() {
 
         <div>
           <label htmlFor="usernameInput">Kullanıcı adı</label>
-          <input type="text" id="usernameInput"/>
+          <input type="text" id="usernameInput"
+            defaultValue={userName}
+            onChange={e => setUserName(e.target.value)} />
+          {showUserNameError && <p className="mt-2 text-danger small">Kuallanıcı adı boş bırakılamaz</p>}
+
         </div>
 
         <div>
           <label htmlFor="emailInput">E-mail</label>
-          <input type="text" id="emailInput"/>
+          <input type="text" id="emailInput"
+            defaultValue={email}
+            onChange={e => setEmail(e.target.value)}
+          />
+          {showEmailError && <p className="mt-2 text-danger small">Email kısmı boş bırakılamaz</p>}
         </div>
 
         <div className={style.cancelButtonAndAddButton}>
-          <button className={style.cancelButton}>İptal et</button>
-          <button className={style.addButton}>Kaydet</button>
+          <button className={style.addButton} onClick={editUser}>Kaydet</button>
         </div>
       </form>
     </div>

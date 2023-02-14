@@ -70,6 +70,7 @@
     padding: 10px 30px;
     color: #fff;
     transition: All 0.4s;
+    display: inline-block;
 }
 .URSaddNewServiceAndEducationCountry .addNewServiceAndEducationCountryForm .cancelButtonAndAddButton .cancelButton {
     border: 1px solid red;
