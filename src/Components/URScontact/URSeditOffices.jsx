@@ -5,7 +5,8 @@ import { NavLink } from 'react-bootstrap';
 
 export default function URSeditOffices(props) {
   axios.defaults.withCredentials = true;
-  const url = 'https://185.48.182.52/v1';
+  const url = 'https://api.ursdanismanlik.com/v1';
+  
   const [showSuccessAlert, setShowSuccessAlert] = useState(false);
 
   const [name, setName] = useState(props.data.name);

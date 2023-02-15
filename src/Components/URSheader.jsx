@@ -17,7 +17,8 @@ export default function URSheader(props) {
   })
 
 
-  const url = 'https://185.48.182.52/v1';
+  const url = 'https://api.ursdanismanlik.com/v1';
+
   const logout = useCallback((e) => {
     e.preventDefault();
     props.setLoading(true)
@@ -40,7 +41,7 @@ export default function URSheader(props) {
           <div className={style.user} >
             <div className={style.userNameAndPhoto} data-key={'toggleMenu'} onClick={getProphile}>
               <div className={style.userPhoto} data-key={'toggleMenu'}>
-                <img src={`https://185.48.182.52/uploads/${localStorage.getItem('picture')}`} alt="" className={style.photo} data-key={'toggleMenu'} />
+                <img src={`https://api.ursdanismanlik.com/uploads/${localStorage.getItem('picture')}`} alt="" className={style.photo} data-key={'toggleMenu'} />
               </div>
               <div className={style.userName} data-key={'toggleMenu'}>
                 <p data-key={'toggleMenu'}>{localStorage.getItem('userName')}</p>
@@ -52,7 +53,7 @@ export default function URSheader(props) {
             <div className={style.userProphile}>
               <div className={style.userNameAndPhoto}>
                 <div className={style.userPhoto}>
-                  <img src={`https://185.48.182.52/uploads/${localStorage.getItem('picture')}`} alt="" className={style.photo} />
+                  <img src={`https://api.ursdanismanlik.com/uploads/${localStorage.getItem('picture')}`} alt="" className={style.photo} />
                 </div>
                 <div className={style.userName}>
                   <p className={style.fullPageUserName}>{localStorage.getItem('userName')}</p>

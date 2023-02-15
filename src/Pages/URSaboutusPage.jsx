@@ -8,7 +8,7 @@ import '../assets/css/CK.css'
 
 export default function URSaboutusPage() {
   axios.defaults.withCredentials = true;
-  const url = 'https://185.48.182.52/v1';
+  const url = 'https://api.ursdanismanlik.com/v1';
 
   const [URSDataAboutUs, setURSDataAboutUs] = useState([]);
   const [isLoading, setLoading] = useState(true);
@@ -54,7 +54,7 @@ export default function URSaboutusPage() {
       setTitle(item.title);
       setId(item._id);
       setDescription(item.description)
-      setImage(`https://185.48.182.52/uploads/${item.picture}`)
+      setImage(`https://api.ursdanismanlik.com/uploads/${item.picture}`)
     })
   })
   const changeEditorData = (event, editor) => {

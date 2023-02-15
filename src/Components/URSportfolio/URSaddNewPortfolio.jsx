@@ -6,7 +6,7 @@ import axios from "axios";
 
 export default function URSaddNewPortfolio() {
   axios.defaults.withCredentials = true;
-  const url = 'https://185.48.182.52/v1';
+  const url = 'https://api.ursdanismanlik.com/v1';
 
   const [image, setImage] = useState(null);
   const [imageSRC, setImageSRC] = useState('');

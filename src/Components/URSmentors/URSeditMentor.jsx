@@ -4,10 +4,10 @@ import axios from "axios";
 
 export default function URSeditPortfolio(props) {
   axios.defaults.withCredentials = true;
-  const url = 'https://185.48.182.52/v1';
+  const url = 'https://api.ursdanismanlik.com/v1';
 
 
-  const [image, setImage] = useState(`https://185.48.182.52/uploads/${props.data.picture}`);
+  const [image, setImage] = useState(`https://api.ursdanismanlik.com/uploads/${props.data.picture}`);
   const [imageURL, setImageURL] = useState('');
   const [mentorName, setMentorName] = useState(props.data.name);
   const [mentorSurname, setMentorSurname] = useState(props.data.surName);

@@ -11,7 +11,7 @@ import Loading from "../Loading";
 
 export default function URSmentorsPage() {
   axios.defaults.withCredentials = true;
-  const url = 'https://185.48.182.52/v1';
+  const url = 'https://api.ursdanismanlik.com/v1';
 
   const [searchInpVal, setSearchInpVal] = useState("");
   const [selectedOffice, setSelectedOffice] = useState(false);

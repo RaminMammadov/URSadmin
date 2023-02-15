@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 export default function URSaddNewYoutubeVideo() {
   axios.defaults.withCredentials = true;
-  const url = 'https://185.48.182.52/v1';
+  const url = 'https://api.ursdanismanlik.com/v1';
 
   const [videoTitle, setVideoTitle] = useState('');
   const [link, setLink] = useState('');
@@ -23,7 +23,7 @@ export default function URSaddNewYoutubeVideo() {
     link ? setShowLinkError(false) : setShowLinkError(true);
 
     if (videoTitle && link) {
-      const url = 'https://185.48.182.52/v1';
+      const url = 'https://api.ursdanismanlik.com/v1';
       axios.post(`${url}/video/add`, {
         "videoTitle": videoTitle,
         "link": link

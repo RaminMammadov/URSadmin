@@ -4,9 +4,9 @@ import axios from "axios";
 
 export default function URSeditServiceAndEducationCountry(props) {
   axios.defaults.withCredentials = true;
-  const url = 'https://185.48.182.52/v1';
+  const url = 'https://api.ursdanismanlik.com/v1';
 
-  const [image, setImage] = useState(`https://185.48.182.52/uploads/${props.data.picture}`);
+  const [image, setImage] = useState(`https://api.ursdanismanlik.com/uploads/${props.data.picture}`);
   const [imageURL, setImageURL] = useState();
   const [countryName, setCountryName] = useState(props.data.countryName)
 

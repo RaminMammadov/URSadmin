@@ -48,7 +48,8 @@ export default function URSyoutubeVideosPage() {
 
   //getData
   const [URSdataYoutubeVideos, setURSdataYoutubeVideos] = useState([]);
-  const url = 'https://185.48.182.52/v1';
+  const url = 'https://api.ursdanismanlik.com/v1';
+  
   const getData = useCallback(() => {
     axios.get(`${url}/videos`)
       .then(response => setURSdataYoutubeVideos(response.data.data))

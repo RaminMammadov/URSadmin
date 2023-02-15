@@ -7,19 +7,20 @@ import { mdiWindowShutter } from "@mdi/js";
 
 export default function URSeditServiceAndEducation(props) {
   axios.defaults.withCredentials = true;
-  const url = 'https://185.48.182.52/v1';
+  const url = 'https://api.ursdanismanlik.com/v1';
+
   const [showSuccessAlert, setShowSuccessAlert] = useState(false);
   const [serviceName, setServiceName] = useState(props.data.title);
   const [shortDescription, setShortDescription] = useState(props.data.shortDescription);
   const [description, setDescription] = useState(props.data.description);
 
-  const [image, setImage] = useState(`https://185.48.182.52/uploads/${props.data.picture1}`);
+  const [image, setImage] = useState(`https://api.ursdanismanlik.com/uploads/${props.data.picture1}`);
   const [imageSRC, setImageSRC] = useState('');
 
-  const [icon, setIcon] = useState(`https://185.48.182.52/uploads/${props.data.picture2}`);
+  const [icon, setIcon] = useState(`https://api.ursdanismanlik.com/uploads/${props.data.picture2}`);
   const [iconSRC, setIconSRC] = useState('');
 
-  const [hoverIcon, setHoverIcon] = useState(`https://185.48.182.52/uploads/${props.data.picture3}`);
+  const [hoverIcon, setHoverIcon] = useState(`https://api.ursdanismanlik.com/uploads/${props.data.picture3}`);
   const [hoverIconSRC, setHoverIconSRC] = useState('');
 
   const [showServiceNameError, setShowServiceNameError] = useState(false);

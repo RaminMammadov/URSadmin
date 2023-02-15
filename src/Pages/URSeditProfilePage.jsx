@@ -3,9 +3,9 @@ import style from "../assets/css/URSeditProfilePage.module.css";
 import axios from "axios";
 
 export default function URSeditProfilePage() {
-  const url = 'https://185.48.182.52/v1';
+  const url = 'https://api.ursdanismanlik.com/v1';
 
-  const [image, setImage] = useState(`https://185.48.182.52/uploads/${localStorage.getItem('picture')}`);
+  const [image, setImage] = useState(`https://api.ursdanismanlik.com/uploads/${localStorage.getItem('picture')}`);
   const [imageSRC, setImageSRC] = useState('');
   const [userName, setUserName] = useState(localStorage.getItem('userName'))
   const [email, setEmail] = useState(localStorage.getItem('email'))

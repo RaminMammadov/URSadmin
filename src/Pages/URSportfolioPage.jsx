@@ -12,7 +12,7 @@ import { Button } from "react-bootstrap";
 
 export default function URSportfolioPage() {
   axios.defaults.withCredentials = true;
-  const url = 'https://185.48.182.52/v1';
+  const url = 'https://api.ursdanismanlik.com/v1';
 
   const [isLoading, setLoading] = useState(true);
   const [show, setShow] = useState(false);
