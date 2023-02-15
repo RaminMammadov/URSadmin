@@ -6,7 +6,7 @@ import style from '../assets/css/URSloginPage.module.css';
 export default function URSloginPage(props) {
     const userName = useRef();
     const password = useRef();
-    const url = 'https://185.48.182.52/v1';
+    const url = 'https://api.ursdanismanlik.com/v1';
 
     const logIn = (e) => {
         e.preventDefault();
