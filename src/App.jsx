@@ -6,6 +6,7 @@ import URSloginPage from './Pages/URSloginPage';
 import axios from 'axios';
 import Loading from './Components/Loading';
 export default function App() {
+
   axios.defaults.withCredentials = true;
   const [isLogged, setLogged] = useState(false);
   const [userData, setUserData] = useState('');
@@ -13,7 +14,7 @@ export default function App() {
 
 
   useEffect(() => {
-    axios.post(`https://185.48.182.52/v1/checkAuth`, {}).then(response => {
+    axios.post(`https://api.ursdanismanlik.com/v1/checkAuth`, {}).then(response => {
       console.log(response)
       if (response.data.isLogged) {
         setLogged(true)
