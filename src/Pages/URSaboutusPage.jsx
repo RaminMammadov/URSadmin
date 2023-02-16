@@ -102,7 +102,6 @@ export default function URSaboutusPage() {
   }
 
 
-  // editorState.getCurrentContent().getPlainText();
   return (
     <div className={style.URSaboutusPage}>
       {showSuccessAlert && <div className="alert alert-success" role="alert">
