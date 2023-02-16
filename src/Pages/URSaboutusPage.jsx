@@ -105,8 +105,6 @@ export default function URSaboutusPage() {
   // editorState.getCurrentContent().getPlainText();
   return (
     <div className={style.URSaboutusPage}>
-      <h1>About Page</h1>
-      <h1>About Page</h1>
       {showSuccessAlert && <div className="alert alert-success" role="alert">
         Hakkımızda kısmı değiştirildi
       </div>}
