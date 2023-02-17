@@ -30,6 +30,7 @@ export default function URSaddNewServiceAndEducationCountry() {
     imageURL ? setShowImageError(false) : setShowImageError(true);
 
     var formdata = new FormData();
+
     if (imageURL && countryName) {
       formdata.append("countryName", countryName);
       formdata.append("picture", imageURL);

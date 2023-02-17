@@ -10,7 +10,7 @@ export default function URSaddNewYoutubeVideo() {
 
   const [videoTitle, setVideoTitle] = useState('');
   const [link, setLink] = useState('');
-  const [splittedLink, setSplittedLink] = useState([]);
+  const [splittedLink, setSplittedLink] = useState('');
   const [embedLink, setEmbedLink] = useState('');
 
   const [showVideoTitleError, setShowVideoTitleError] = useState(false);
