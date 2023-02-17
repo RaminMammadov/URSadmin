@@ -73,7 +73,7 @@ export default function URSeditYoutubeVideo(props) {
         </div>
 
         <div className={style.cancelButtonAndAddButton}>
-          <button className={style.cancelButton}>Geri dön</button>
+          <NavLink to={'/URSyoutubeVideosPage'} className={style.cancelButton}>Geri dön</NavLink>
           <button className={style.addButton} onClick={editVideo}>Düzenle</button>
         </div>
       </form>
