@@ -27,7 +27,7 @@ export default function URSloginPage(props) {
                 if (data.isLogged) {
                     props.setLogged(true)
                     localStorage.clear();
-                    console.log(JSON.stringify(data.data.picture.slice(1, -1)))
+                    console.log(data.data.picture.slice(1, -1))
                     localStorage.setItem('userName', JSON.stringify(data.data.name).slice(1, -1));
                     localStorage.setItem('picture', JSON.stringify(data.data.picture).slice(1, -1));
                     localStorage.setItem('email', JSON.stringify(data.data.email).slice(1, -1));
