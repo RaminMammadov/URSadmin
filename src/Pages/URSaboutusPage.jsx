@@ -67,7 +67,7 @@ export default function URSaboutusPage() {
   const changeData = (e) => {
     e.preventDefault();
     var formdata = new FormData();
-    if (newImage) {
+    if (newImage.trim()) {
       formdata.append("id", id);
       formdata.append("title", newTitle ? newTitle : title);
       formdata.append("description", newDescription ? newDescription : description);

@@ -29,7 +29,7 @@ export default function URSeditPortfolio(props) {
   const editMentor = useCallback((e) => {
     e.preventDefault();
 
-    if (imageURL) {
+    if (imageURL.trim()) {
       var formdata = new FormData();
       formdata.append("id", props.data._id);
       formdata.append("name", mentorName);
