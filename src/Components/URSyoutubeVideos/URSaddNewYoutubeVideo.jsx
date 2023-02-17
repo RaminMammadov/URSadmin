@@ -35,8 +35,6 @@ export default function URSaddNewYoutubeVideo() {
           setTimeout(() => {
             setShowSuccessAlert(false)
           }, 2000);
-          setVideoTitle('');
-          setLink('');
           form.reset();
         })
     }
