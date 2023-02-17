@@ -27,7 +27,7 @@ export default function URSaddNewYoutubeVideo() {
     if (videoTitle && link) {
       const url = 'https://api.ursdanismanlik.com/v1';
       setSplittedLink(link.split('&'));
-      setEmbedLink(splittedLink[0].replace('watch?v','embed/'))
+      setEmbedLink(splittedLink[0].replace('watch?v=','embed/'))
       console.log(embedLink)
       axios.post(`${url}/video/add`, {
         "videoTitle": videoTitle,
