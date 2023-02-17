@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from "react";
 import style from "../../assets/css/URSyoutubeVideos/URSeditYoutubeVideo.module.css";
 import axios from 'axios'
-import { NavLink } from "react-router-dom";
 
 export default function URSeditYoutubeVideo(props) {
   axios.defaults.withCredentials = true;
@@ -74,7 +73,7 @@ export default function URSeditYoutubeVideo(props) {
         </div>
 
         <div className={style.cancelButtonAndAddButton}>
-          <NavLink to={'/URSyoutubeVideosPage'} className={style.cancelButton}>Geri dön</NavLink>
+          <button className={style.cancelButton}>Geri dön</button>
           <button className={style.addButton} onClick={editVideo}>Düzenle</button>
         </div>
       </form>
