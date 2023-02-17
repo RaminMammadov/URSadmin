@@ -28,8 +28,9 @@ export default function URSaddNewServiceAndEducationCountry() {
     e.preventDefault();
     countryName ? setShowCountryNameError(false) : setShowCountryNameError(true);
     imageURL ? setShowImageError(false) : setShowImageError(true);
-    if (imageURL && countryName) {
 
+    var formdata = new FormData();
+    if (imageURL && countryName) {
       formdata.append("countryName", countryName);
       formdata.append("picture", imageURL);
       axios.post(`${url}/country/add`, formdata, {
