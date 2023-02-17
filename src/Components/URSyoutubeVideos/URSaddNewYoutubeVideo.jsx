@@ -26,7 +26,7 @@ export default function URSaddNewYoutubeVideo() {
       const url = 'https://api.ursdanismanlik.com/v1';
       axios.post(`${url}/video/add`, {
         "videoTitle": videoTitle,
-        "link": link
+        "link": link.replace('watch?v=4','embed/')
       })
         .then(response => console.log(response))
         .catch(error => console.log(error))
