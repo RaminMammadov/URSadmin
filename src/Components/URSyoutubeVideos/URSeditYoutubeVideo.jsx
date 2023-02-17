@@ -8,7 +8,9 @@ export default function URSeditYoutubeVideo(props) {
 
 
   const [videoTitle, setVideoTitle] = useState(props.data.videoTitle);
-  const [link, setLink] = useState(props.data.link)
+  const [link, setLink] = useState(props.data.link);
+  const [splittedLink,setSplittedLink] = useState([]);
+  const [embedLink,setEmbedLink] = useState('');
 
   const [showVideoTitleError, setShowVideoTitleError] = useState(false);
   const [showLinkError, setShowLinkError] = useState(false);
@@ -21,10 +23,12 @@ export default function URSeditYoutubeVideo(props) {
     link ? setShowLinkError(false) : setShowLinkError(true);
 
     if (videoTitle && link) {
+      setSplittedLink(link.split('='));
+      setEmbedLink(splittedLink[0].replace('watch?v','embed/') + splittedLink[1])
       var formdata = new FormData();
       formdata.append("id", props.data._id);
       formdata.append("videoTitle", videoTitle);
-      formdata.append("link", link);
+      formdata.append("link", embedLink);
       axios.put(`${url}/video/edit`, formdata, {
         headers: {
           'content-type': 'multipart/form-data'
